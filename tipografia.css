@@ -1,0 +1,288 @@
+/* ------------------ RESETEO Y BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+a {
+  color: #b71c24;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ BOTÓN VOLVER ------------------ */
+.volver {
+  position: fixed;
+  top: 1.6rem;
+  left: 1.6rem;
+  color: #d90429;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  z-index: 100;
+}
+.volver:hover {
+  color: #8b0f15;
+}
+
+/* ------------------ ENCABEZADO ------------------ */
+.header-meta {
+  margin-left: 120px;
+  padding-top: 0.6rem;
+}
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #d90429;
+  letter-spacing: 0.6px;
+}
+.sub {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* ------------------ BLOQUES PRINCIPALES ------------------ */
+.trabajos2024 {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+.bloque {
+  margin-bottom: 4.5rem;
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* ------------------ PORTADA ------------------ */
+.portada .portada-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.portada-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(8%);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.portada-img img:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+.portada-texto {
+  padding: 10px 6px;
+}
+.titulo-bloque {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #d90429;
+  margin-bottom: 0.6rem;
+}
+
+/* ------------------ BOTONES ------------------ */
+.acciones {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.btn-link {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #d90429;
+  color: #d90429;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.btn-link:hover {
+  background: #d90429;
+  color: #fff;
+}
+.btn-link.ghost {
+  background: transparent;
+  border-style: dashed;
+  color: #6b6b6b;
+  border-color: #ccc;
+  font-weight: 600;
+}
+.btn-primary {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #d90429;
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* ------------------ FASES ------------------ */
+.fases .fase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.fase-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(10, 10, 10, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fase-card .imagen img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+.fase-card .texto h3 {
+  font-size: 1.05rem;
+  color: #b71c24;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.fase-card .texto p {
+  font-size: 0.95rem;
+  color: #222;
+}
+.mini-meta {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ------------------ CIERRE ------------------ */
+.cierre .contenedor {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 8px;
+}
+.cierre-texto {
+  flex: 1;
+}
+.cierre-img img {
+  width: 360px;
+  max-width: 40%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------------------ DECORACIÓN ------------------ */
+.bloque::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: #d90429;
+  opacity: 0.06;
+  top: -40px;
+  right: -20px;
+  border-radius: 50%;
+  transform: rotate(14deg);
+  z-index: -1;
+}
+
+/* ------------------ TEXTOS ------------------ */
+p {
+  margin-top: 0.6rem;
+  color: #222;
+  font-size: 1rem;
+}
+.meta {
+  margin-top: 0.6rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .portada .portada-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .header-meta {
+    margin-left: 0;
+    text-align: center;
+  }
+  .fase-card .imagen img {
+    height: 200px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  body {
+    padding: 1.2rem;
+  }
+  .fases .fase-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cierre .contenedor {
+    flex-direction: column-reverse;
+  }
+  .cierre-img img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .bloque::before {
+    display: none;
+  }
+  .volver {
+    position: static;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .fases .fase-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn-link,
+  .btn-primary {
+    font-size: 0.85rem;
+    padding: 7px 10px;
+  }
+  .cierre-texto p {
+    font-size: 0.9rem;
+  }
+}
