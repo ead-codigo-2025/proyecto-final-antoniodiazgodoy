@@ -1,0 +1,197 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  color: #111;
+}
+
+
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fff 50%, #d90429 50%);
+}
+
+
+header {
+  width: 100%;
+  padding: clamp(15px, 2vw, 40px);
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+}
+
+.btn.rojo {
+  background-color: #d90429;
+  color: #fff;
+}
+
+.btn.rojo:hover {
+  background-color: #fff;
+  color: #d90429;
+  border-color: #d90429;
+}
+
+.btn.blanco {
+  background-color: #fff;
+  color: #d90429;
+}
+
+.btn.blanco:hover {
+  background-color: #d90429;
+  color: #fff;
+  border-color: #fff;
+}
+
+
+main {
+  flex: 1;
+  padding: clamp(40px, 5vw, 60px) clamp(5%, 10vw, 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+main h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: #d90429;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main p {
+  max-width: 100%;
+  line-height: 1.6;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  margin-bottom: 25px;
+}
+
+
+.info-contacto {
+  background-color: #fff;
+  padding: clamp(15px, 3vw, 25px);
+  border-left: 6px solid #d90429;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.info-contacto a {
+  color: #d90429;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info-contacto a:hover {
+  text-decoration: underline;
+}
+
+
+.btn.volver {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #d90429;
+  border: 2px solid #d90429;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+
+.btn.volver:hover {
+  background-color: #d90429;
+  color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+  main h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  main {
+    align-items: center;
+    padding: clamp(30px, 5vw, 50px) 5%;
+  }
+
+  .contacto-container {
+    background: linear-gradient(180deg, #fff 60%, #d90429 40%);
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav a {
+    padding: 0.4rem 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+
+  main h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+
+  main p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  .info-contacto {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .btn.volver {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 5%;
+  }
+
+  main h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
